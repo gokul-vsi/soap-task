@@ -47,4 +47,22 @@ document.getElementById("button").addEventListener("click", (e) => {
     removedata.parentNode.removeChild(removedata);
     updatetotal();
   }
-  
+  function generatingpdf(){
+    let tableclone = document.getElementById("formtable").cloneNode(true);
+    let tableclonerowsandcolumn = tableclone.outerHTML;
+    var invoiceWindow = window.open('', '_blank');
+    invoiceWindow.document.write('<head><style>');
+    invoiceWindow.document.write('body { font-family: Arial, sans-serif; }');
+    invoiceWindow.document.write('table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }');
+    invoiceWindow.document.write('th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }');
+    invoiceWindow.document.write('th { background-color: #f2f2f2; }');
+    invoiceWindow.document.write('#totalAmount { font-weight: bold; }');
+    invoiceWindow.document.write('#invoiceTitle { text-align: center; font-size: 24px; margin-bottom: 20px; }');
+    invoiceWindow.document.write('</style>');
+    invoiceWindow.document.write('</head><body>');
+    invoiceWindow.document.write('<h2 id="invoiceTitle">Invoice</h2>');
+    invoiceWindow.document.write(tableclonerowsandcolumn);
+    invoiceWindow.document.close();
+    invoiceWindow.print();
+
+}

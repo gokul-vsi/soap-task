@@ -22,14 +22,6 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../assets/images/favicon.png" />
     <style>
-      @media print {
-        body,body *{
-          visibility: hidden;
-        }
-        .tablediv,.tablediv *{
-          visibility: visible;
-        }
-      }
     </style>
   </head>
   <body>
@@ -192,7 +184,7 @@
                 <div class="nav-profile-image">
                   <img src="../../assets/images/faces/face1.jpg" alt="profile" />
                   <span class="login-status online"></span>
-                  <!--change to offline or busy as needed
+                  <!-- change to offline or busy as needed -->
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
                   <span class="font-weight-bold mb-2">Saam</span>
@@ -264,7 +256,7 @@
               </div>
             </li>
           </ul>
-        </nav> -->
+        </nav>
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
@@ -358,7 +350,7 @@
                         <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Enter your product example rice and biscuites"></textarea>
                       </div> -->
                       <button type="submit" class="btn btn-gradient-primary me-2" id="button">ADD PRODUCT</button>
-                      <button type="submit" class="btn btn-primary" onclick="window.print()">PRINT</button>
+                      <button type="submit" class="btn btn-primary" onclick="generatingpdf()">PRINT</button>
                     </div>
                   </div>
                 </div>
