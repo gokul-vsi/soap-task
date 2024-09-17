@@ -48,7 +48,7 @@ document.getElementById("button").addEventListener("click", (e) => {
     updatetotal();
   }
   function generatingpdf(){
-    let tableclone = document.getElementById("formtable").cloneNode(true);
+    let tableclone = document.getElementById("table").cloneNode(true);
     let tableclonerowsandcolumn = tableclone.outerHTML;
     var invoiceWindow = window.open('', '_blank');
     invoiceWindow.document.write('<head><style>');
